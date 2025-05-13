@@ -5,17 +5,10 @@ import { toPersianNumber } from "@/random-shit-functions/utils";
 import { ChatContext } from "@/store/chat-context";
 import { ChevronLeft } from "lucide-react";
 
-import * as React from "react";
-import { CartDrawer } from "./CartDrawer";
-import { motion } from "motion/react";
-import { useCart } from "@/hooks/useCart";
+import { Button } from "@/components/ui/button";
+import { Button2 } from "@/components/ui/button2";
 
 export const FooterCart = () => {
-  const { cart } = useCart();
-  const [isOpenCartDrawer, setIsOpenCartDrawer] = React.useState(false);
-  const [newItemAddedToCart, setNewItemAddedToCart] = React.useState(false);
-  const prevCartLengthRef = React.useRef(cart.length);
-
   const newlyAddedItem = cart[cart.length - 1];
   const { submitCheckoutCart } = React.useContext(ChatContext);
   React.useEffect(() => {
@@ -67,7 +60,6 @@ export const FooterCart = () => {
                   height={48}
                 />
               ))}
-
               <div className="relative -mr-4 flex h-12 w-12 flex-col items-center justify-center rounded-[50%] border bg-slate-100">
                 <SmartImage
                   className={`absolute -z-10 ${
