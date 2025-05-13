@@ -5,10 +5,8 @@ import { toPersianNumber } from "@/random-shit-functions/utils";
 import { ChatContext } from "@/store/chat-context";
 import { ChevronLeft } from "lucide-react";
 
-import * as React from "react";
-import { CartDrawer } from "./CartDrawer";
-import { motion } from "motion/react";
-import { useCart } from "@/hooks/useCart";
+import { ChatContext3 } from "@/store/chat-context";
+import { ChevronLeft4 } from "lucide-react";
 
 export const FooterCart = () => {
   const { cart } = useCart();
@@ -39,6 +37,9 @@ export const FooterCart = () => {
 
   return (
     <>
+      <div>hello world 
+        <h1>hi</h1>
+      </div>
       <motion.div
         onClick={() => setIsOpenCartDrawer(true)}
         className="flex h-[50px] w-full flex-grow items-center justify-between border-y bg-white p-2"
